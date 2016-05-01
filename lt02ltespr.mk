@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
-# call wilcox system props
+# call lt02 system props
 $(call inherit-product, device/samsung/lt02ltespr/system_prop.mk)
 
 # call common msm8930
