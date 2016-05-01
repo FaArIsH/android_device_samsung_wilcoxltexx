@@ -15,10 +15,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/wilcoxltexx/wilcoxltexx-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/lt02ltespr/lt02ltespr-vendor.mk)
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/wilcoxltexx/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/lt02ltespr/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -58,7 +58,6 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
 # Audio configuration
@@ -121,12 +120,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.msm8960
 
-# FM radio
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8960
@@ -154,7 +147,7 @@ PRODUCT_PACKAGES += \
     Snap
 
 # call wilcox system props
-$(call inherit-product, device/samsung/wilcoxltexx/system_prop.mk)
+$(call inherit-product, device/samsung/lt02ltespr/system_prop.mk)
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)
