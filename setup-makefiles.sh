@@ -1,4 +1,4 @@
-export DEVICE=wilcoxltexx
+export DEVICE=lt02ltespr
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
@@ -99,7 +99,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter wilcoxltexx,\$(TARGET_DEVICE)),)
+ifneq (\$(filter lt02ltespr,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
