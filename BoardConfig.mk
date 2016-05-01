@@ -30,9 +30,9 @@ BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=23 androidb
 BOARD_KERNEL_BASE            := 0x80200000
 BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE        := 2048
-TARGET_KERNEL_SOURCE         := kernel/samsung/wilcoxltexx
+TARGET_KERNEL_SOURCE         := kernel/samsung/msm8930-common
 TARGET_KERNEL_CONFIG         := cyanogen_lt02ltexx_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8930_cane_wilcox_eur_lte_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8930_lt02_spr_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
@@ -95,3 +95,6 @@ BOARD_RIL_CLASS := ../../../device/samsung/lt02ltespr/ril/
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/lt02ltespr/cmhw
+
+# Odex ROM for performance
+WITH_DEXPREOPT := true
