@@ -21,6 +21,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), wilcoxltexx)
+ifeq ($(TARGET_DEVICE), lt02ltespr)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
