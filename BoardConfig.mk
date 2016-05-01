@@ -23,7 +23,7 @@
 # inherit from common msm8930
 -include device/samsung/msm8930-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/wilcoxltexx/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt02ltespr/include
 
 # Kernel
 BOARD_KERNEL_CMDLINE         := androidboot.hardware=qcom user_debug=23 androidboot.bootdevice=msm_sdcc.1
@@ -31,16 +31,16 @@ BOARD_KERNEL_BASE            := 0x80200000
 BOARD_MKBOOTIMG_ARGS         := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE        := 2048
 TARGET_KERNEL_SOURCE         := kernel/samsung/wilcoxltexx
-TARGET_KERNEL_CONFIG         := cyanogen_cane_defconfig
+TARGET_KERNEL_CONFIG         := cyanogen_lt02ltexx_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_cane_wilcox_eur_lte_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := wilcoxlte,wilcoxltexx,SM-G3815
+TARGET_OTA_ASSERT_DEVICE := lt02ltespr,serranoltexx,serranolte,SM-T217S
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/wilcoxltexx/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/lt02ltespr/rootdir/fstab.qcom
 
 # Reduce space taken by the journal
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
@@ -56,7 +56,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/wilcoxltexx/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02ltespr/bluetooth
 
 # NFC
 #BOARD_HAVE_NFC := true
@@ -91,7 +91,7 @@ TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
 
 # RIL
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
-BOARD_RIL_CLASS := ../../../device/samsung/wilcoxltexx/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/lt02ltespr/ril/
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/samsung/wilcoxltexx/cmhw
+BOARD_HARDWARE_CLASS := device/samsung/lt02ltespr/cmhw
