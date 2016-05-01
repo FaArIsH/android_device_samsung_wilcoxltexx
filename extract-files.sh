@@ -3,7 +3,7 @@
 set -e
 
 export VENDOR=samsung
-export DEVICE=wilcox-common
+export DEVICE=lt02ltespr
 
 if [ $# -eq 0 ]; then
   SRC=adb
