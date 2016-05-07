@@ -37,7 +37,7 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8930_lt02_spr_defconfig
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lt02ltespr,serranoltexx,serranolte,SM-T217S
+TARGET_OTA_ASSERT_DEVICE := lt02ltespr,lt02ltemo,serranolte,SM-T217S
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/lt02ltespr/rootdir/fstab.qcom
@@ -95,6 +95,3 @@ BOARD_RIL_CLASS := ../../../device/samsung/lt02ltespr/ril/
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/lt02ltespr/cmhw
-
-# Odex ROM for performance
-WITH_DEXPREOPT := true
