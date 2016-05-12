@@ -39,6 +39,11 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lt02ltespr,lt02ltemo,serranolte,SM-T217S
 
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/lt02ltespr/init/init_lt02lte.cpp
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/lt02ltespr/rootdir/fstab.qcom
 
