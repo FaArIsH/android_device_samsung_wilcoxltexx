@@ -8,14 +8,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libargs=-d /dev/smd0 \
     rild.libpath=/system/lib/libsec-ril.so \
-    rild.libargs=-d/dev/smd0 \
-    ro.sf.hwrotation=270
-    telephony.lteOnGsmDevice=1 \
-    ro.telephony.default_network=9 \
+    ro.sf.hwrotation=270 \
+    ro.cdma.default_numeric=310120 \
+    ro.cdma.default_alpha=Sprint \
+    ro.gps.set_privacy=1 \
+    ro.telephony.default_network=4 \
+    ro.telephony.get_imsi_from_sim=true \
+    telephony.lteOnCdmaDevice=1 \
     ro.telephony.ril_class=WilcoxRIL \
-    ro.ril.telephony.mqanelements=6 \
-    persist.radio.add_power_save=1
+    telephony.sms.pseudo_multipart=1 \
+    persist.radio.snapshot_enabled=1 \
+    persist.radio.snapshot_timer=22 \
+    persist.eons.enabled=false \
+    ro.telephony.default_cdma_sub=1 \
+    ro.telephony.ril.v3=newDriverCallU,newDialCode \
+    ro.telephony.ril.config=newDriverCallU,newDialCode \
+    persist.radio.no_wait_for_card=1 \
+    persist.radio.use_se_table_only=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -27,13 +38,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.gapless.playback.disable=true \
     audio.offload.disable=1 \
     mm.enable.smoothstreaming=true \
-    persist.audio.fluence.mode=endfire \
-    persist.audio.vr.enable=false \
-    persist.audio.handset.mic=digital \
-    persist.audio.lowlatency.rec=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    use.dedicated.device.for.voip=true \
     qcom.hw.aac.encoder=true \
     media.aac_51_output_enabled=true
 
