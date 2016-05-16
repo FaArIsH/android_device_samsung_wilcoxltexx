@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libargs=-d /dev/smd0 \
+    rild.libargs=-d/dev/smd0 \
     rild.libpath=/system/lib/libsec-ril.so \
     ro.sf.hwrotation=270 \
     ro.cdma.default_numeric=310120 \
